@@ -1,62 +1,88 @@
 <!DOCTYPE html>
+
 <html lang="es">
+
 <head>
   <meta charset="utf-8" />
-  <title>Game of Thrones Fanpage — Inicio</title>
+  <title>Game of Thrones — Inicio</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link href="styles.css" rel="stylesheet" />
 </head>
+
 <body>
   <header>
-    <h1>Game of Thrones Fanpage</h1>
-    <nav>
-      <a href="index.html">Inicio</a> |
-      <a href="personajes.html">Personajes</a> |
-      <a href="episodios.html">Episodios</a>
-    </nav>
-    <hr>
+    <div class="header-inner">
+      <h1>Game of Thrones</h1>
+      <nav>
+        <a href="index.html">Inicio</a><span class="sep">•</span>
+        <a href="personajes.html">Personajes</a><span class="sep">•</span>
+        <a href="episodios.html">Episodios</a>
+      </nav>
+    </div>
   </header>
-
   <main>
-    <div>
-      <h2>Bienvenidos a Westeros</h2>
-      <p>
-        Elegi esta serie porque la vi completa y me gustó la trama y el estilo visual.
-      </p>
-    </div>
-
-    <div>
-      <h3>Imagen personal camuflada</h3>
-      <img
-        src="img/personaje.png"
-        alt="Imagen personal camuflada al estilo de Game of Thrones"
-        width="400"
-        height="600"
-      />
-      <p>
-        Esta es una imagen personal camuflada al estilo de Game of Thrones.
-      </p>
-    </div>
-
-    <div>
-      <h3>Sobre la serie</h3>
-      <p>
-        Juego de Tronos narra las sangrientas luchas de varias familias nobles por el poder del Trono de Hierro en los Siete
-        Reinos de Poniente, mientras una antigua amenaza, los Caminantes Blancos, resurge al norte del Muro. La trama sigue a
-        las principales Casas, como los Stark y los Lannister, en sus intrigas políticas y guerras, que ponen en riesgo el
-        destino de los reinos.
-      </p>
-    </div>
-    <div>
-      <h3>Sitios sobre Game of Thrones</h3>
-      <p>
-        <a href="https://es.wikipedia.org/wiki/Game_of_Thrones" target="_blank"> Historia de la serie</a>
-      </p>
+    <div class="container">
+      <section class="section">
+        <div>
+          <h2>Bienvenidos a Westeros</h2>
+          <p>
+            Elegi esta serie porque la vi completa y me gustó la trama y el estilo visual.
+          </p>
+        </div>
+      </section>
+      <section class="section">
+        <div>
+          <h3>Imagen personal camuflada</h3>
+          <img alt="Imagen personal camuflada al estilo de Game of Thrones" height="600" src="img/personaje.png"
+            width="400" />
+          <p>
+            Esta es una imagen personal camuflada al estilo de Game of Thrones.
+          </p>
+        </div>
+      </section>
+      <section class="section">
+        <div>
+          <h3>Sobre la serie</h3>
+          <p>
+            Juego de Tronos narra las sangrientas luchas de varias familias nobles por el poder del Trono de Hierro en
+            los Siete
+            Reinos de Poniente, mientras una antigua amenaza, los Caminantes Blancos, resurge al norte del Muro. La
+            trama sigue a
+            las principales Casas, como los Stark y los Lannister, en sus intrigas políticas y guerras, que ponen en
+            riesgo el
+            destino de los reinos.
+          </p>
+        </div>
+      </section>
+      <section class="section">
+        <div>
+          <h3>Sitios sobre Game of Thrones</h3>
+          <p>
+            <a href="https://es.wikipedia.org/wiki/Game_of_Thrones" target="_blank"> Historia de la serie</a>
+          </p>
+        </div>
+      </section>
+      <section class="section">
+        <h2>Contacto para Fans</h2>
+        <p>Dejanos tu comentario o suscribite para novedades de la serie.</p>
+        <form action="#" method="post">
+          <label for="nombre">Nombre</label><input id="nombre" name="nombre" placeholder="Arya Stark" type="text" />
+          <label for="email">Email</label><input id="email" name="email" placeholder="tu@correo.com" type="email" />
+          <label for="mensaje">Mensaje</label><textarea id="mensaje" name="mensaje" placeholder="Dejanos un comentario o teoría favorita:"></textarea>
+          <div>
+            <button class="btn btn--accent" type="button">Enviar</button> 
+            <button class="btn" type="reset">Limpiar</button>
+          </div>
+        </form>
+      </section>
     </div>
   </main>
 
-  <hr>
-
   <footer>
-    <p>Autor: Manuel Vassallo — 2025</p>
+    <div class="footer-inner">
+      <p>Autor: Manuel Vassallo — 2025</p>
+    </div>
   </footer>
 </body>
+
 </html>

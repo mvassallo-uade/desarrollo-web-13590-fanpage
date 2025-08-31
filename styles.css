@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Lato:wght@300;400;700&display=swap');
+
+:root {
+  --bg: #0b0f14;
+  --panel: #121821;
+  --accent: #b18d46;
+  --text: #eaeaea;
+  --muted: #c9c9c9;
+  --footer: #1a1f24;
+  --link: #d4b15a;
+  --danger: #9c2b2b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lato', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: radial-gradient(1200px 800px at 20% -10%, #131a23, transparent),
+    radial-gradient(1200px 800px at 120% 10%, #101720, transparent),
+    var(--bg);
+  line-height: 1.65;
+}
+
+header {
+  background: linear-gradient(to bottom, #131a1a, #0f1319);
+  border-bottom: 1px solid #222a34;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Cinzel', serif;
+  letter-spacing: .5px;
+  margin: 0 0 .5rem 0;
+}
+
+h1 {
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  color: var(--accent);
+}
+
+h2 {
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+}
+
+h3 {
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+}
+
+nav a {
+  color: var(--link);
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: all .2s ease;
+  display: inline-block;
+}
+
+nav a:hover {
+  background: #1b2230;
+  transform: translateY(-1px);
+}
+
+nav .sep {
+  color: #445;
+  margin: 0 4px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 24px auto;
+  padding: 0 16px 32px;
+}
+
+.section {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #1f2733;
+  border-radius: 14px;
+  padding: 18px;
+  margin: 18px 0;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #2a3342;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, .35);
+  transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
+}
+
+img:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, .45);
+  filter: saturate(1.05);
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #2c3646;
+  background: linear-gradient(to bottom, #202735, #171e29);
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .2s ease, filter .2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, .35);
+  filter: brightness(1.08);
+}
+
+.btn--accent {
+  border-color: #6f5825;
+  background: linear-gradient(to bottom, #ab8a3c, #896e31);
+  color: #140e02;
+}
+
+.btn--danger {
+  border-color: #582323;
+  background: linear-gradient(to bottom, #b13d3d, #8c2f2f);
+  color: #fff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: #121927;
+  border: 1px solid #1f2733;
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.card h3 {
+  margin-top: 8px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: .98rem;
+}
+
+.video {
+  position: relative;
+  aspect-ratio: 16/9;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid #2a3342;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, .35);
+}
+
+.video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+form {
+  display: grid;
+  gap: 12px;
+}
+
+label {
+  font-weight: 700;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #2a3342;
+  background: #0f1520;
+  color: var(--text);
+  outline: none;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+footer {
+  background: var(--footer);
+  border-top: 1px solid #2a3342;
+  margin-top: 24px;
+}
+
+.footer-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 14px 16px;
+  color: #a7b0bf;
+  font-size: .95rem;
+}
